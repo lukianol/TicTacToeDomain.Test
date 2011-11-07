@@ -75,7 +75,8 @@ public final class StubGame implements IGame {
 		throw new UnsupportedOperationException();
 	}
 
-	public Field[] getWonFields() {
+	@Override
+	public Position[] getWonPositions() {
 		throw new UnsupportedOperationException();
 	}
 

@@ -17,7 +17,7 @@ public class NeDiagWinGameStateHandlerTest {
 		GameStateResult result = handler.handleState(game);
 		assertNotNull(result.getWinnerStroke());
 		assertEquals(GameState.Won, result.getGameState());
-		assertEquals(game.getPlaygroundSize(), result.getWonFields().length);
+		assertEquals(game.getPlaygroundSize(), result.getWonPositions().length);
 	}
 
 }

@@ -43,7 +43,7 @@ public class PlayingOrDrawnGameStateHandlerTest {
 		GameStateResult result = handler.handleState(game);
 		
 		assertNull(result.getWinnerStroke());
-		assertNull(result.getWonFields());
+		assertNull(result.getWonPositions());
 		assertEquals(result.getGameState(), GameState.Playing);
 
 	}
@@ -56,7 +56,7 @@ public class PlayingOrDrawnGameStateHandlerTest {
 		GameStateResult result = handler.handleState(game);
 		
 		assertNull(result.getWinnerStroke());
-		assertNull(result.getWonFields());
+		assertNull(result.getWonPositions());
 		assertEquals(result.getGameState(), GameState.Playing);
 
 	}
@@ -69,7 +69,7 @@ public class PlayingOrDrawnGameStateHandlerTest {
 		GameStateResult result = handler.handleState(game);
 		
 		assertNull(result.getWinnerStroke());
-		assertNull(result.getWonFields());
+		assertNull(result.getWonPositions());
 		assertEquals(result.getGameState(), GameState.Drawn);
 
 	}
