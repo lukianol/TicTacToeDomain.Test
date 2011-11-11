@@ -80,4 +80,10 @@ public final class StubGame implements IGame {
 		throw new UnsupportedOperationException();
 	}
 
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
