@@ -2,7 +2,7 @@
 
 import static org.junit.Assert.*;
 import lukianol.tictactoe.GameState;
-import lukianol.tictactoe.IGame;
+import lukianol.tictactoe.GameBase;
 import lukianol.tictactoe.TicTacToeException;
 import lukianol.tictactoe.gamestate.GameStateResult;
 import lukianol.tictactoe.gamestate.PlayingOrDrawnGameStateHandler;
@@ -38,7 +38,7 @@ public class PlayingOrDrawnGameStateHandlerTest {
 	@Test
 	public void emptyPlaygroundIsPlaying() throws TicTacToeException {
 		
-		IGame game = GameFactory.createJustStartedGame();
+		GameBase game = GameFactory.createJustStartedGame();
 		PlayingOrDrawnGameStateHandler handler = new  PlayingOrDrawnGameStateHandler();
 		GameStateResult result = handler.handleState(game);
 		
@@ -51,7 +51,7 @@ public class PlayingOrDrawnGameStateHandlerTest {
 	@Test
 	public void almostFullfilPlaygroundIsPlaying() throws TicTacToeException {
 		
-		IGame game = GameFactory.createAlmostFullfilGame();
+		GameBase game = GameFactory.createAlmostFullfilGame();
 		PlayingOrDrawnGameStateHandler handler = new  PlayingOrDrawnGameStateHandler();
 		GameStateResult result = handler.handleState(game);
 		
@@ -64,7 +64,7 @@ public class PlayingOrDrawnGameStateHandlerTest {
 	@Test
 	public void filledPlaygroundIsDrawn() throws TicTacToeException {
 		
-		IGame game = GameFactory.createDrawnGame();
+		GameBase game = GameFactory.createDrawnGame();
 		PlayingOrDrawnGameStateHandler handler = new  PlayingOrDrawnGameStateHandler();
 		GameStateResult result = handler.handleState(game);
 		

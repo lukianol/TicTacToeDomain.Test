@@ -2,7 +2,7 @@ package lukianol.tictactoe.gamestate.test;
 
 import static org.junit.Assert.*;
 import lukianol.tictactoe.GameState;
-import lukianol.tictactoe.IGame;
+import lukianol.tictactoe.GameBase;
 import lukianol.tictactoe.TicTacToeException;
 import lukianol.tictactoe.gamestate.GameStateResult;
 import lukianol.tictactoe.gamestate.NeDiagWinGameStateHandler;
@@ -12,7 +12,7 @@ public class NeDiagWinGameStateHandlerTest {
 
 	@Test
 	public void testHandleState() throws TicTacToeException {
-		IGame game = GameFactory.createNeStrokedGame();
+		GameBase game = GameFactory.createNeStrokedGame();
 		NeDiagWinGameStateHandler handler = new NeDiagWinGameStateHandler();
 		GameStateResult result = handler.handleState(game);
 		assertNotNull(result.getWinnerStroke());

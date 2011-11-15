@@ -3,12 +3,12 @@ package lukianol.tictactoe.gamestate.test;
 import lukianol.tictactoe.Field;
 import lukianol.tictactoe.GameEventListener;
 import lukianol.tictactoe.GameState;
-import lukianol.tictactoe.IGame;
+import lukianol.tictactoe.GameBase;
 import lukianol.tictactoe.Position;
 import lukianol.tictactoe.StrokeKind;
 import lukianol.tictactoe.TicTacToeException;
 
-public final class StubGame implements IGame {
+public final class StubGame extends GameBase {
 	
 	private int _size;
 	private Field[][] _fields;

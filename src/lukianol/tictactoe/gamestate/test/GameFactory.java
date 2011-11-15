@@ -1,14 +1,14 @@
 package lukianol.tictactoe.gamestate.test;
 
 import lukianol.tictactoe.Field;
-import lukianol.tictactoe.IGame;
+import lukianol.tictactoe.GameBase;
 import lukianol.tictactoe.Position;
 import lukianol.tictactoe.StrokeKind;
 import lukianol.tictactoe.TicTacToeException;
 
 public class GameFactory {
 
-	public static IGame createJustStartedGame() throws TicTacToeException {
+	public static GameBase createJustStartedGame() throws TicTacToeException {
 		
 		Field[][] fields = {
 				{F(0, 0, null), F(0, 1, null), F(0, 2, null),},
@@ -19,7 +19,7 @@ public class GameFactory {
 		return new StubGame(fields, 3);
 	}
 	
-	public static IGame createAlmostFullfilGame() throws TicTacToeException {
+	public static GameBase createAlmostFullfilGame() throws TicTacToeException {
 		
 		Field[][] fields = {
 				{F(0, 0, StrokeKind.O), F(0, 1, StrokeKind.X), F(0, 2, StrokeKind.X),},
@@ -30,7 +30,7 @@ public class GameFactory {
 		return new StubGame(fields, 3);
 	}
 	
-	public static IGame createDrawnGame() throws TicTacToeException {
+	public static GameBase createDrawnGame() throws TicTacToeException {
 		
 		Field[][] fields = {
 				{F(0, 0, StrokeKind.O), F(0, 1, StrokeKind.X), F(0, 2, StrokeKind.X),},
@@ -41,7 +41,7 @@ public class GameFactory {
 		return new StubGame(fields, 3);
 	}
 	
-	public static IGame createColumnStrokedGame() throws TicTacToeException{
+	public static GameBase createColumnStrokedGame() throws TicTacToeException{
 		Field[][] fields = {
 				{F(0, 0, StrokeKind.O), F(0, 1, StrokeKind.X), F(0, 2, StrokeKind.X),},
 				{F(1, 0, StrokeKind.X), F(1, 1, StrokeKind.O), F(1, 2, StrokeKind.O),},
@@ -51,7 +51,7 @@ public class GameFactory {
 		return new StubGame(fields, 3);
 	}
 
-	public static IGame createRowStrokedGame() throws TicTacToeException {
+	public static GameBase createRowStrokedGame() throws TicTacToeException {
 		
 		Field[][] fields = {
 				{F(0, 0, StrokeKind.O), F(0, 1, StrokeKind.X), F(0, 2, StrokeKind.X),},
@@ -62,7 +62,7 @@ public class GameFactory {
 		return new StubGame(fields, 3);
 	}
 
-	public static IGame createNwStrokedGame() throws TicTacToeException {
+	public static GameBase createNwStrokedGame() throws TicTacToeException {
 		
 		Field[][] fields = {
 				{F(0, 0, StrokeKind.O), F(0, 1, StrokeKind.X), F(0, 2, StrokeKind.X),},
@@ -73,7 +73,7 @@ public class GameFactory {
 		return new StubGame(fields, 3);
 	}
 	
-	public static IGame createNeStrokedGame() throws TicTacToeException {
+	public static GameBase createNeStrokedGame() throws TicTacToeException {
 		
 		Field[][] fields = {
 				{F(0, 0, StrokeKind.O), F(0, 1, StrokeKind.X), F(0, 2, StrokeKind.X),},
